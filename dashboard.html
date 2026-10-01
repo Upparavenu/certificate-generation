@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CertiGen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo" style="margin-bottom: 2rem;"><h2>CertiGen</h2></div>
+            <nav style="flex-direction: column; background: none; padding: 0;">
+                <a href="dashboard.html" class="btn" style="text-align: left;"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="generate.html" class="btn" style="text-align: left;"><i class="fas fa-plus-circle"></i> Generate</a>
+                <a href="certificates.html" class="btn" style="text-align: left;"><i class="fas fa-file-alt"></i> My Certificates</a>
+                <button id="logoutBtn" class="btn" style="margin-top: 2rem; color: #ff4444;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h1>Welcome, <span id="userNameDisplay">User</span>!</h1>
+            </header>
+
+            <div class="stats-grid">
+                <div class="glass-card">
+                    <i class="fas fa-certificate fa-2x"></i>
+                    <h3>Total Generated</h3>
+                    <h2 id="totalCount">0</h2>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-check-double fa-2x"></i>
+                    <h3>Status</h3>
+                    <h2 style="font-size: 1.2rem; color: #4ade80;">Active</h2>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>Quick Actions</h3>
+                <div style="margin-top: 1rem;">
+                    <a href="generate.html" class="btn btn-primary">Generate New Certificate</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

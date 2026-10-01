@@ -1,0 +1,39 @@
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <h3>Admin Panel</h3>
+        <a href="#">Overview</a>
+        <a href="#">Manage All</a>
+    </div>
+    <div class="main-content">
+        <div class="stats-grid">
+            <div class="glass-card"><h4>Total Certificates</h4><h2 id="totalCert">0</h2></div>
+            <div class="glass-card"><h4>Verified Today</h4><h2>12</h2></div>
+        </div>
+        
+        <div style="max-width: 600px;">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Sample Chart Initialization
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+            datasets: [{
+                label: 'Certificates Generated',
+                data: [12, 19, 3, 5, 2],
+                backgroundColor: '#6366f1'
+            }]
+        },
+        options: {
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+</script>

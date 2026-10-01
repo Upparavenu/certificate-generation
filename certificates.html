@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Certificates | CertiGen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Reuse Sidebar from Dashboard -->
+        <main class="main-content">
+            <h1>My Issued Certificates</h1>
+            <div class="glass-card" style="margin-top: 2rem; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--glass-border);">
+                            <th style="padding: 1rem;">Student Name</th>
+                            <th style="padding: 1rem;">Course</th>
+                            <th style="padding: 1rem;">ID</th>
+                            <th style="padding: 1rem;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="certificateTableBody">
+                        <!-- Data loaded via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

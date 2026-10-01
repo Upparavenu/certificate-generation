@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Certificate</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="glass-card">
+    <form id="certificateForm">
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+
+            <div class="form-group">
+                <label>Student Name</label>
+                <input type="text" id="studentName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Course Name</label>
+                <input type="text" id="course" required>
+            </div>
+
+            <div class="form-group">
+                <label>Roll Number</label>
+                <input type="text" id="rollNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label>Issue Date</label>
+                <input type="date" id="issueDate" required>
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Generate & Save Certificate
+        </button>
+
+    </form>
+</div>
+
+<div id="qrcode" style="display:none"></div>
+
+<div id="previewContainer" style="display:none">
+    <div id="certificate-preview"></div>
+
+    <button onclick="downloadPDF()" class="btn btn-primary">
+        Download PDF
+    </button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="module" src="js/certificate.js"></script>
+
+</body>
+</html>
